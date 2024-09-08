@@ -20,8 +20,9 @@ body{
     opacity: 80%;
     border-radius: 0.5vw;
     padding: 1vw;
-    height: 40vh;
-    width: 20vw;
+    height: 50vh;
+    width: 25vw;
+
 }
 
 .input-city{
@@ -29,10 +30,15 @@ body{
     outline: none;
     border-radius: 0.3vw;
     height: 1.5vw;
+    /* padding: 1vw; */
     font-size: 1vw;
     background-color: #7c7c7ceb;
-    color: #ffffff;
+    color: black;
     width: calc(100%-100px);
+}
+
+.input-city::placeholder{
+    color: black;
 }
 
 button{
