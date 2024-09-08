@@ -5,7 +5,7 @@ const key = "d66a70f6c2960de613aae17abe518df9";
 
 function ScreenData(dados){
     console.log(dados)
-    document.querySelector(".city").innerHTML = "Tempo em " + dados.name;
+    document.querySelector(".city").innerHTML = dados.name;
     document.querySelector(".wheather").outerHTML = Math.floor(dados.main.temp) + "ºC";
     document.querySelector(".text-weather").innerHTML = dados.weather[0].description;
     document.querySelector(".humidity").innerHTML = "Umidade " + dados.main.humidity + "%";

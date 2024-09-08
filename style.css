@@ -21,7 +21,7 @@ body{
     border-radius: 0.5vw;
     padding: 1vw;
     height: 50vh;
-    width: 25vw;
+    width: 30vw;
 
 }
 
@@ -34,21 +34,24 @@ body{
     font-size: 1vw;
     background-color: #7c7c7ceb;
     color: black;
-    width: calc(100%-100px);
+    width: 80%;
 }
 
 .input-city::placeholder{
     color: black;
 }
 
-button{
-    width: 100px;
-    height: 1.5vw;
+.search-icon{
+    width: 7%;
     float: right;
-    border-radius: 0.3vw;
-    border: none;
-    font-weight: 700;
     cursor: pointer;
+}
+
+.header-city{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .city{
