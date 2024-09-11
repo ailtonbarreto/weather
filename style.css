@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    background-color: black;
+    background-color: transparent;
     opacity: 80%;
     border-radius: 0.5vw;
     padding: 1vw;
@@ -26,24 +26,24 @@ body{
 }
 
 .input-city{
-    border:none;
+    border: solid #ffffff;
+    border-width: 1px;
     outline: none;
     border-radius: 0.3vw;
     height: 1.5vw;
-    /* padding: 1vw; */
     font-size: 1vw;
-    background-color: #7c7c7ceb;
-    color: black;
+    background-color: transparent;
+    color: #ffffff;
     width: 80%;
 }
 
 .input-city::placeholder{
-    color: black;
+    color: #ffffff;
 }
 
 .search-icon{
-    width: 7%;
-    float: right;
+    width: 5%;
+    /* float: right; */
     cursor: pointer;
 }
 
@@ -55,7 +55,7 @@ body{
 }
 
 .city{
-    color: #ffffff;
+    color: #054e70;
     font-size: 1vw;
     margin-top: 3vw;
     margin-bottom: 2vw;
@@ -64,6 +64,7 @@ body{
 
 p{
     text-transform: capitalize;
+    font-weight: bold;
 }
 
 img{
@@ -72,7 +73,8 @@ img{
 
 .wheather{
     font-size: 1vw;
-    color: #ffffff;
+    color: #054e70;
+    font-weight: bold;
     margin-top: 1vw;
 }
 
@@ -85,7 +87,8 @@ img{
 .container-icon{
     display: flex;
     flex-direction: column;
-    color: #ffffff;
+    color: #054e70;
+    font-weight: bold;
     align-items: left;
     justify-content: space-around;
     gap: 1vw;
