@@ -16,11 +16,11 @@ body{
 }
 
 .container{
-    background-color: transparent;
+    background-color: #000000;
     opacity: 80%;
     border-radius: 0.5vw;
     padding: 1vw;
-    height: 50vh;
+    /* height: 50vh; */
     width: 30vw;
 
 }
@@ -55,7 +55,7 @@ body{
 }
 
 .city{
-    color: #054e70;
+    color: #ffffff;
     font-size: 1vw;
     margin-top: 3vw;
     margin-bottom: 2vw;
@@ -73,7 +73,7 @@ img{
 
 .wheather{
     font-size: 1vw;
-    color: #054e70;
+    color: #ffffff;
     font-weight: bold;
     margin-top: 1vw;
 }
@@ -87,7 +87,7 @@ img{
 .container-icon{
     display: flex;
     flex-direction: column;
-    color: #054e70;
+    color: #ffffff;
     font-weight: bold;
     align-items: left;
     justify-content: space-around;
