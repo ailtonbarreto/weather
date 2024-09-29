@@ -16,8 +16,8 @@ body{
 }
 
 .container{
-    background-color: #000000;
-    opacity: 80%;
+    background-color: #3a3a3a;
+    opacity: 70%;
     border-radius: 0.5vw;
     padding: 1vw;
     /* height: 50vh; */
@@ -60,6 +60,7 @@ body{
     margin-top: 3vw;
     margin-bottom: 2vw;
     text-transform: capitalize;
+    /* opacity: 100%; */
 }
 
 p{
@@ -69,6 +70,7 @@ p{
 
 img{
     width: 3vw;
+    opacity: 100%;
 }
 
 .wheather{
