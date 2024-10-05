@@ -16,12 +16,12 @@ body{
 }
 
 .container{
-    background-color: #3a3a3a;
+    background-color: #757575;
     opacity: 70%;
     border-radius: 0.5vw;
     padding: 1vw;
-    /* height: 50vh; */
     width: 30vw;
+    box-shadow: 1px 4px 7px #000000;
 
 }
 
@@ -34,23 +34,31 @@ body{
     font-size: 1vw;
     background-color: transparent;
     color: #ffffff;
-    width: 80%;
+    width: 70%;
 }
 
 .input-city::placeholder{
     color: #ffffff;
+    background-color: #757575;
+}
+
+.searh-container{
+    width: 30%;
+    z-index: 1;
+    align-items: center;
 }
 
 .search-icon{
-    width: 5%;
-    /* float: right; */
+    width: 1.75vw;
     cursor: pointer;
+    float: right;
+    z-index: 1;
 }
 
 .header-city{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 
 }
 
