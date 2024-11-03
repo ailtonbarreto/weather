@@ -12,10 +12,10 @@ search_icon.addEventListener("click",()=>{
     console.log(city.value)
 
 
-    if(city === "undefined"){
+    if(city.value === "undefined"){
 
 
-        city.innerHTML = "cidade não encontrada";
+        container.style = "display: none";
 
     }else{
         container.style = "display: block";
