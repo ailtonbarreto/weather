@@ -11,12 +11,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("https://1drv.ms/i/s!Ar065l2YiZmIqGUgohpdnT7LdfYK?embed=1&width=1920&height=1080");
+    background: url("./clima.jpg");
     background-size: cover;
 }
 
 .container{
-    background-color: #757575;
+    background-color: #000000;
     opacity: 70%;
     border-radius: 0.5vw;
     padding: 1vw;
@@ -38,8 +38,8 @@ body{
 }
 
 .input-city::placeholder{
-    color: #ffffff;
-    background-color: #757575;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 .searh-container{
@@ -68,7 +68,7 @@ body{
     margin-top: 3vw;
     margin-bottom: 2vw;
     text-transform: capitalize;
-    /* opacity: 100%; */
+    display: none;
 }
 
 p{
@@ -89,7 +89,7 @@ img{
 }
 
 .container-meio{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: left;
 }
