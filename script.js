@@ -1,56 +1,48 @@
 const key = "d66a70f6c2960de613aae17abe518df9";
-const city_input = document.querySelector(".input-city").value;
 const container = document.querySelector(".container-meio");
 const city = document.querySelector(".city");
 const search_icon = document.querySelector(".search-icon");
 
 
-// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
-search_icon.addEventListener("click",()=>{
-   
-    console.log(city.value)
-
-
-    if(city.value === "undefined"){
-
-
-        container.style = "display: none";
-
-    }else{
-        container.style = "display: block";
-        city.style = "display: block";
-
-    };
-
-
-
-});
-
-
-
-function ScreenData(dados){
+function ScreenData(dados) {
     document.querySelector(".city").innerHTML = dados.name;
     document.querySelector(".wheather").innerHTML = Math.floor(dados.main.temp) + "ºC";
     document.querySelector(".text-weather").innerHTML = dados.weather[0].description;
     document.querySelector(".humidity").innerHTML = "Umidade " + dados.main.humidity + "%";
-    document.querySelector(".img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
+    document.querySelector(".img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`;
 }
 
-async function SearchCity(cidade){
+async function SearchCity(cidade) {
+    try {
+        const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&units=metric`
+        );
 
-    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&units=metric`)
-    .then(response => response.json());
+        if (!response.ok) {
+            throw new Error("Cidade não encontrada");
+        }
 
-    ScreenData(dados)
-
+        const dados = await response.json();
+        container.style.display = "block";
+        ScreenData(dados);
+    } catch (error) {
+        container.style.display = "none";
+        city.style.display = "block";
+        city.innerHTML = "Cidade Não Encontrada";
+    }
 }
 
 
-function clickSearch(){
+function clickSearch() {
+    let cidade = document.querySelector(".input-city").value.trim();
 
-    let cidade = document.querySelector(".input-city").value;
-    
-    SearchCity(cidade)
+    if (cidade) {
+        SearchCity(cidade);
+    } else {
+        city.style.display = "block";
+        city.innerHTML = "Por favor, insira uma cidade";
+    }
 }
 
+
+search_icon.addEventListener("click", clickSearch);
