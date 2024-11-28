@@ -4,6 +4,8 @@ const city = document.querySelector(".city");
 const search_icon = document.querySelector(".search-icon");
 
 
+// -------------------------------------------------------------------------------------------
+
 function ScreenData(dados) {
     document.querySelector(".city").innerHTML = dados.name;
     document.querySelector(".wheather").innerHTML = Math.floor(dados.main.temp) + "ºC";
@@ -11,6 +13,9 @@ function ScreenData(dados) {
     document.querySelector(".humidity").innerHTML = "Umidade " + dados.main.humidity + "%";
     document.querySelector(".img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`;
 }
+
+
+// -------------------------------------------------------------------------------------------
 
 async function SearchCity(cidade) {
     try {
@@ -32,6 +37,7 @@ async function SearchCity(cidade) {
     }
 }
 
+// ---------------------------------------------------------------------------------------------
 
 function clickSearch() {
     let cidade = document.querySelector(".input-city").value.trim();
